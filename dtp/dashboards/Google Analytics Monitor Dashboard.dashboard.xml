@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
+<!-- Manual changes can cause severe problems and system instability -->
+<!-- Apply manual changes only if you have received explicit instructions from dynaTrace Support -->
+<dynatrace version="3.5.0.2151" date="7/28/10 3:48 PM">
+  <dashboardconfig memento.version="3.5.0.2151" icon="com.dynatrace.diagnostics.sdk/default.gif" sessiontype="live" locationassource="true" authorname="admin" opendrilldowninnewdashboard="false" sessionid="Google Analytics" bgcolor="255,255,255,255" modified="2010-07-28T15:48:55-0400" id="3295c9f6-ab6a-4a20-bf46-6f7f403447b8" revision="0000012a-1a99-b4c5-b4e2-d90d647ff95b" created="2010-07-28T09:53:24-0400" description="" name="Google Analytics Monitor Dashboard" modifiedbyname="andreas.grabner">
+    <reportconfig lines.per.table="100" pagesize="A4" orientation="portrait" print.legends="true" enabled="true" title="" description="" levels.per.tree="10" override="false" print.images="true" type="PDF" />
+    <filter>
+      <criterion type="timeframe">
+        <timeframe type="Last 6h" />
+      </criterion>
+      <criterion type="btm" />
+      <criterion showrendering="true" shownetwork="true" showjavascript="true" type="riapurepathtype" requestcriterion="ALL" />
+      <criterion completepurepath="true" type="agents" mode="all">
+        <textpattern enabled="true" name="agentname" type="contains" />
+        <textpattern enabled="true" name="agenthost" type="contains" />
+      </criterion>
+      <criterion type="purepaths" mode="all">
+        <textpattern enabled="true" type="contains" />
+      </criterion>
+      <criterion severities="" severitiesmode="all" rulesmode="all" type="incident" />
+      <criterion type="webpage">
+        <textpattern enabled="true" name="timerName" type="contains" />
+        <textpattern enabled="true" name="pageContext" type="contains" />
+      </criterion>
+      <criterion completepurepath="true" type="hosts" mode="all" />
+      <criterion type="webrequest">
+        <textpattern enabled="true" name="uri" type="contains" />
+        <textpattern enabled="true" name="query" type="contains" />
+      </criterion>
+      <criterion excludeexternalsubpaths="false" type="api" mode="all" />
+      <criterion timerenabled="false" pageenabled="false" type="browsersectionfilter">
+        <textpattern enabled="true" name="timername" type="contains" />
+        <textpattern enabled="true" name="pageurl" type="contains" />
+      </criterion>
+      <criterion enabled="false" filterbyid="false" type="threads" />
+    </filter>
+    <autorefreshconfig unit="MINUTES" enabled="true" time="5" />
+    <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" descriptionfontsize="8" nameshow="true" clienttheme="DEFAULT" headertype="DEFAULT" namefontsize="10" descriptionshow="true" autoadjustfontsizes="false" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+    <dashboardlayout>
+      <portletfolder relationtype="LEFT" ratio="0.95" folderid="leftFolder" selectionindex="0" relatedfolderid="DashboardLayout.blankArea" portletconfigorder="0e02c9bb-f909-4884-98ad-2224ed038f54">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="HEADLESS" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.49944136" folderid="org.eclipse.ui.internal.ViewStack@116f3e6" selectionindex="1" relatedfolderid="leftFolder" portletconfigorder="bc882f1e-1c63-4978-a96d-676ddd0ea5a1, e56792d4-8eb1-4a8b-8e9f-71d337cc22d8">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.35044643" folderid="org.eclipse.ui.internal.ViewStack@8aa6f1" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@116f3e6" portletconfigorder="68fcda04-2bfe-4424-be8c-acd5809fb378">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.49828178" folderid="org.eclipse.ui.internal.ViewStack@1ebe42c" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@8aa6f1" portletconfigorder="7d7817f7-a960-483e-8d51-77c697da841a">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+    </dashboardlayout>
+    <portletconfig com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" icon="com.dynatrace.diagnostics.sdk/default.gif" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="leftFolder" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" usedashboardsource="true" heightmode="AdjustToFontSize" bgcolor="236,233,216,255" id="0e02c9bb-f909-4884-98ad-2224ed038f54" addfilterinfo="false" source="server://grabs" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="Google Analytics Monitor Dashboard" description="" name="Text" typeid="com.dynatrace.diagnostics.portlets.text.Text" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="1" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <font height="12" style="BOLD_ITALIC" name="Arial" />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/chart_cust.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@1ebe42c" sessiontype="live" usedashboardsource="true" sessionid="Google Analytics" bgcolor="236,233,216,255" id="7d7817f7-a960-483e-8d51-77c697da841a" addfilterinfo="false" source="server://grabs" description="" lastvalue="false" name="Time on Site" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="4" />
+      <filter>
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="AreaChart" resolution="Auto" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" subchartweights="200" axis.y.title="" axis.y.title.show="false" axis.x.show="true" valuestyle="2" axis.x.title.show="false" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="false" max="false" measure="true" count="false" last="false" sum="false" agent="false" aggregation="false" unit="false" avg="false" />
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" dynamicconfig="false" aggregationtype="Avg" autounit="false" sessionid="Google Analytics" uiunit="s" fetchmeasurecolor="true" id="753413ac-75e3-4522-9794-42b2bab3cdda" displayrate="10s" unit="s" systemid="Google Analytics" overridesource="false" rate="10s" ratesupported="true" name="Time on Site" sourcecolor="RGB(64,128,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="true" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Time on Site" metricgroupkey="Analytics" collector="" systemid="Google Analytics" agenthost="" parentkeyid="Time on Site" metrickeyid="Time on Site" agentname="Google Analytics Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Google Analytics Monitor" measureunit="s" monitorscheduleid="Google Analytics Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Google Analytics" uiunit="s" fetchmeasurecolor="true" id="a579d3b2-3b86-34de-9572-a931341bf3ce" displayrate="10s" unit="s" systemid="Google Analytics" overridesource="false" rate="10s" ratesupported="true" name="Time on Site" sourcecolor="RGB(64,128,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Time on Site" metricgroupkey="Analytics" collector="" systemid="Google Analytics" agenthost="grabs" parentkeyid="Time on Site" metrickeyid="Time on Site" agentname="Google Analytics Monitor" />
+            <displaysourceinfo monitorhost="grabs" monitordetails="Google Analytics Monitor" measureunit="s" monitorscheduleid="Google Analytics Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table name="The Measure table" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="150" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="20" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="true" smartserver="true" smartselection="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/default.gif" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@116f3e6" usedashboardsource="false" bgcolor="236,233,216,255" id="e56792d4-8eb1-4a8b-8e9f-71d337cc22d8" addfilterinfo="false" source="server://grabs" description="" name="Tasks / Monitors" typeid="com.dynatrace.diagnostics.portlets.scheduling.GlobalSchedule" ismaster="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="5" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <datamodelconfig>
+        <scheduletable global="true">
+          <table name="GobalTaskScheduler" sortcolumn="0" structuremode="hierarchicalbymastermonitor" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12">
+            <column index="0" sort="Up" forcevisible="false" hidden="false" width="180" />
+            <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+            <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+            <column index="3" sort="None" forcevisible="false" hidden="false" width="20" />
+            <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+            <column index="5" sort="None" forcevisible="false" hidden="false" width="20" />
+            <column index="6" sort="None" forcevisible="false" hidden="false" width="100" />
+            <column index="7" sort="None" forcevisible="false" hidden="true" width="70" />
+            <column index="8" sort="None" forcevisible="false" hidden="true" width="70" />
+            <column index="9" sort="None" forcevisible="false" hidden="true" width="100" />
+            <column index="10" sort="None" forcevisible="false" hidden="false" width="100" />
+            <column index="11" sort="None" forcevisible="false" hidden="false" width="150" />
+            <column index="12" sort="None" forcevisible="false" hidden="false" width="100" />
+          </table>
+        </scheduletable>
+      </datamodelconfig>
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/chart_cust.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@116f3e6" sessiontype="live" usedashboardsource="true" sessionid="Google Analytics" bgcolor="236,233,216,255" id="bc882f1e-1c63-4978-a96d-676ddd0ea5a1" addfilterinfo="false" source="server://grabs" description="" lastvalue="false" name="PageViews, Visits and New Visits" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="2" />
+      <filter>
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="AreaChart" resolution="Auto" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" subchartweights="200" axis.y.title="" axis.y.title.show="false" axis.x.show="true" valuestyle="2" axis.x.title.show="false" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="false" max="false" measure="true" count="false" last="false" sum="false" agent="false" aggregation="false" unit="false" avg="false" />
+          <chartsource position="3" scale="0" visible="false" sessiontype="live" dynamicconfig="false" aggregationtype="Avg" autounit="false" sessionid="Google Analytics" uiunit="number" fetchmeasurecolor="true" id="09519f8b-8978-46a3-a597-ce4cd7139d92" displayrate="10s" unit="number" systemid="Google Analytics" overridesource="false" rate="10s" ratesupported="true" name="New Visits" sourcecolor="RGB(0,255,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="true" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="New Visits" metricgroupkey="Analytics" collector="" systemid="Google Analytics" agenthost="" parentkeyid="New Visits" metrickeyid="New Visits" agentname="Google Analytics Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Google Analytics Monitor" measureunit="number" monitorscheduleid="Google Analytics Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" dynamicconfig="false" aggregationtype="Avg" autounit="false" sessionid="Google Analytics" uiunit="number" fetchmeasurecolor="true" id="9534f417-7f6b-42c3-8eec-b51d122fbf41" displayrate="10s" unit="number" systemid="Google Analytics" overridesource="false" rate="10s" ratesupported="true" name="Visits" sourcecolor="RGB(255,128,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="true" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Visits" metricgroupkey="Analytics" collector="" systemid="Google Analytics" agenthost="" parentkeyid="Visits" metrickeyid="Visits" agentname="Google Analytics Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Google Analytics Monitor" measureunit="number" monitorscheduleid="Google Analytics Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" dynamicconfig="false" aggregationtype="Avg" autounit="false" sessionid="Google Analytics" uiunit="number" fetchmeasurecolor="true" id="7581d943-5213-43fd-8f29-7ecf8f05e0ad" displayrate="10s" unit="number" systemid="Google Analytics" overridesource="false" rate="10s" ratesupported="true" name="PageViews" sourcecolor="RGB(0,0,255,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="true" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="PageViews" metricgroupkey="Analytics" collector="" systemid="Google Analytics" agenthost="" parentkeyid="PageViews" metrickeyid="PageViews" agentname="Google Analytics Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Google Analytics Monitor" measureunit="number" monitorscheduleid="Google Analytics Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Google Analytics" uiunit="number" fetchmeasurecolor="true" id="76ebea91-1ca6-38a2-88ee-49f0b308a6cf" displayrate="10s" unit="number" systemid="Google Analytics" overridesource="false" rate="10s" ratesupported="true" name="New Visits" sourcecolor="RGB(0,255,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="New Visits" metricgroupkey="Analytics" collector="" systemid="Google Analytics" agenthost="grabs" parentkeyid="New Visits" metrickeyid="New Visits" agentname="Google Analytics Monitor" />
+            <displaysourceinfo monitorhost="grabs" monitordetails="Google Analytics Monitor" measureunit="number" monitorscheduleid="Google Analytics Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Google Analytics" uiunit="number" fetchmeasurecolor="true" id="b2446ef5-945c-3339-9844-68996cb7c9f9" displayrate="10s" unit="number" systemid="Google Analytics" overridesource="false" rate="10s" ratesupported="true" name="Visits" sourcecolor="RGB(255,128,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Visits" metricgroupkey="Analytics" collector="" systemid="Google Analytics" agenthost="grabs" parentkeyid="Visits" metrickeyid="Visits" agentname="Google Analytics Monitor" />
+            <displaysourceinfo monitorhost="grabs" monitordetails="Google Analytics Monitor" measureunit="number" monitorscheduleid="Google Analytics Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Google Analytics" uiunit="number" fetchmeasurecolor="true" id="465a8072-d513-39c1-8949-82a27f58f539" displayrate="10s" unit="number" systemid="Google Analytics" overridesource="false" rate="10s" ratesupported="true" name="PageViews" sourcecolor="RGB(0,0,255,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="PageViews" metricgroupkey="Analytics" collector="" systemid="Google Analytics" agenthost="grabs" parentkeyid="PageViews" metrickeyid="PageViews" agentname="Google Analytics Monitor" />
+            <displaysourceinfo monitorhost="grabs" monitordetails="Google Analytics Monitor" measureunit="number" monitorscheduleid="Google Analytics Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table name="The Measure table" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="150" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="20" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="true" smartserver="true" smartselection="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig icon="com.dynatrace.diagnostics.sdk/chart_cust.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@8aa6f1" sessiontype="live" usedashboardsource="true" sessionid="Google Analytics" bgcolor="236,233,216,255" id="68fcda04-2bfe-4424-be8c-acd5809fb378" addfilterinfo="false" source="server://grabs" description="" lastvalue="false" name="Visits to Bounces: How many Visitors bounce off the page" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="3" />
+      <filter>
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="1" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="AreaChart" resolution="Auto" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" subchartweights="200" axis.y.title="" axis.y.title.show="false" axis.x.show="true" valuestyle="2" axis.x.title.show="false" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="false" max="false" measure="true" count="false" last="false" sum="false" agent="false" aggregation="false" unit="false" avg="false" />
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" dynamicconfig="false" aggregationtype="Avg" autounit="false" sessionid="Google Analytics" uiunit="number" fetchmeasurecolor="true" id="590ff89c-f1c7-4ce5-8755-748b82817b49" displayrate="10s" unit="number" systemid="Google Analytics" overridesource="false" rate="10s" ratesupported="true" name="Bounces" sourcecolor="RGB(255,0,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="true" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Bounces" metricgroupkey="Analytics" collector="" systemid="Google Analytics" agenthost="" parentkeyid="Bounces" metrickeyid="Bounces" agentname="Google Analytics Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Google Analytics Monitor" measureunit="number" monitorscheduleid="Google Analytics Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Google Analytics" uiunit="number" fetchmeasurecolor="true" id="2e368c3e-7bb1-355d-823d-a1560cf9469f" displayrate="10s" unit="number" systemid="Google Analytics" overridesource="false" rate="10s" ratesupported="true" name="Bounces" sourcecolor="RGB(255,0,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Bounces" metricgroupkey="Analytics" collector="" systemid="Google Analytics" agenthost="grabs" parentkeyid="Bounces" metrickeyid="Bounces" agentname="Google Analytics Monitor" />
+            <displaysourceinfo monitorhost="grabs" monitordetails="Google Analytics Monitor" measureunit="number" monitorscheduleid="Google Analytics Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" dynamicconfig="false" aggregationtype="Avg" autounit="false" sessionid="Google Analytics" uiunit="number" fetchmeasurecolor="false" id="7dac52b2-c8e9-4288-ba90-d1a8653c6c17" displayrate="10s" unit="number" systemid="Google Analytics" overridesource="true" rate="10s" ratesupported="true" name="Visits" sourcecolor="RGB(0,255,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="true" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Visits" metricgroupkey="Analytics" collector="" systemid="Google Analytics" agenthost="" parentkeyid="Visits" metrickeyid="Visits" agentname="Google Analytics Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Google Analytics Monitor" measureunit="number" monitorscheduleid="Google Analytics Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Google Analytics" uiunit="number" fetchmeasurecolor="false" id="5603b4a1-1a24-32e1-b855-79b69a793679" displayrate="10s" unit="number" systemid="Google Analytics" overridesource="true" rate="10s" ratesupported="true" name="Visits" sourcecolor="RGB(0,255,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Visits" metricgroupkey="Analytics" collector="" systemid="Google Analytics" agenthost="grabs" parentkeyid="Visits" metrickeyid="Visits" agentname="Google Analytics Monitor" />
+            <displaysourceinfo monitorhost="grabs" monitordetails="Google Analytics Monitor" measureunit="number" monitorscheduleid="Google Analytics Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table name="The Measure table" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="150" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="20" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="true" smartserver="true" smartselection="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+  </dashboardconfig>
+</dynatrace>
+
